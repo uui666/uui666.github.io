@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h2>注册</h2>
+        <form id="registration-form" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" name="username" onblur="validateUsername()">
+                <span id="username-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">输入密码</label>
+                <input type="password" id="password" name="password" onblur="validatePassword()">
+                <span id="password-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">确认密码</label>
+                <input type="password" id="confirm-password" name="confirm-password" onblur="validateConfirmPassword()">
+                <span id="confirm-password-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label>性别</label>
+                <input type="radio" id="female" name="gender" value="female" checked>
+                <label for="female">女</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">男</label>
+            </div>
+            <div class="form-group">
+                <label for="hobby">爱好</label>
+                <select id="hobby" name="hobby">
+                    <option value="gaming">打游戏</option>
+                    <option value="reading">读书</option>
+                    <option value="sports">运动</option>
+                    <option value="music">音乐</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="text" id="email" name="email" onblur="validateEmail()">
+                <span id="email-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">手机号</label>
+                <input type="text" id="phone" name="phone" onblur="validatePhone()">
+                <span id="phone-error" class="error-message"></span>
+            </div>
+            <button type="submit" class="submit-btn">提交</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
